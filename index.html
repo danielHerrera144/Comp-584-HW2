@@ -1,151 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title></title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<style type="text/css">
-      /* CLIENT-SPECIFIC STYLES */
-			body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-			table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-			img { -ms-interpolation-mode: bicubic; }
-			
-			/* RESET STYLES */
-			img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
-			table { border-collapse: collapse !important; }
-			body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
-			
-			/* iOS BLUE LINKS */
-			a[x-apple-data-detectors] {
-			    color: inherit !important;
-			    text-decoration: none !important;
-			    font-size: inherit !important;
-			    font-family: inherit !important;
-			    font-weight: inherit !important;
-			    line-height: inherit !important;
-			}
-			
-			/* GMAIL BLUE LINKS */
-			u + #body a {
-			    color: inherit;
-			    text-decoration: none;
-			    font-size: inherit;
-			    font-family: inherit;
-			    font-weight: inherit;
-			    line-height: inherit;
-			}
-			
-			/* SAMSUNG MAIL BLUE LINKS */
-			#MessageViewBody a {
-			    color: inherit;
-			    text-decoration: none;
-			    font-size: inherit;
-			    font-family: inherit;
-			    font-weight: inherit;
-			    line-height: inherit;
-			}
+<head>
+	<title>Email campaign</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type="text/css">
+		/* CLIENT-SPECIFIC STYLES */
+		body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+		table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+		img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+		table { border-collapse: collapse !important; }
+		body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #000000; }
 
-			.center {
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-			}
-			
-			div.mycontainer {
-				width:100%;
-				overflow:auto;
-			}
-			div.mycontainer div {
-				width:33%;  
-				float:left;
-			}
+		/* iOS / Gmail / Samsung link color reset */
+		a[x-apple-data-detectors], u + #body a, #MessageViewBody a {
+			color: inherit; text-decoration: none; font-size: inherit;
+			font-family: inherit; font-weight: inherit; line-height: inherit;
+		}
 
-			/* Universal styles for links and stuff */
-		
+		/* accessibility focus */
+		a:focus, button:focus { outline: 3px solid #21ADE8; outline-offset: 2px; }
 
-			/* Responsive styles */
-	
-		</style>
-	</head>
-	<body id="body" style="margin: 0 !important; padding: 0 !important; background-color: black;">
+		/* original button style (preserved) */
+		.btn {
+			display: inline-block;
+			padding: 12px 60px;
+			border-radius: 12px;
+			background: linear-gradient(180deg, #0099ff, #27bac4);
+			color: #ffffff;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 18px;
+		}
 
+		/* nav link styles (used inside tables) */
+		.nav-link {
+			color: #f2f2f2;
+			padding: 14px 16px;
+			display: inline-block;
+			text-decoration: none;
+			font-size: 17px;
+		}
+		.nav-link:hover { background-color: #04AA6D; color: #000; }
 
-	  <!-- Logo image -->
-		<a href = "https://www.youtube.com/watch?v=b51C8AbRDGU">
-			<img class = "center" src = "Assets/takopi.png" alt = "tako" width = "150" height = "150">
-		</a>
-    
-		<!-- Headline -->
+		/* three‑column container simulated with tables */
+		.col-content {
+			font-size: 18px;
+			padding: 15px;
+			box-sizing: border-box;
+		}
+		/* fixed for tiny weakness text */
+		.weak-text {
+			font-size: 7px;
+			line-height: 1.4;
+			margin: 0;
+		}
+		/* gif background section */
+		.gif-background {
+			background-image: url('Assets/landscape.gif');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		/* table cell background for gif */
+		.gif-cell {
+			background-image: url('Assets/landscape.gif');
+			background-size: cover;
+			background-position: center;
+			text-align: center;
+			padding: 80px 20px;
+		}
+		/* make footer link visible */
+		.gif-cell a { color: white !important; text-decoration: underline !important; }
+	</style>
+</head>
+<body style="margin:0; padding:0; background-color:#000000; font-family: Arial, sans-serif;">
 
-		<h1 style = "text-align: center; color: white;" >
-		Hello World... <br>
-		Welcome To My Email Campaign <br>
-		Let Me Tell You About Myself
-		</h1>
-		
-		<!-- Hero Image -->
-		<div class = "mycontainer" style = "color: black; font-size: 18px">
-		<div style = "background-color:teal;">
-			<h2>Experience</h2>
-			<p>I haven't made much progress in my career</p>
-			<p>But I sure do love working with HTML and CSS</p>
-		</div>
+	<!-- MAIN CONTAINER TABLE: 100% width, black background -->
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#000000">
+		<tr>
+			<td align="center" style="padding:0;">
 
-		<div style = "background-color:#B0E0E6;">
-			<h2>Skills</h2>
-			<p>I don't know</p>
-			<p>I think I learn fast?</p>
-		</div>
+				<!-- CENTERING INNER TABLE (max width 640px for readability) -->
+				<table width="100%" max-width="640px" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#000000" style="max-width:640px; width:100%; background:#000;">
+					<tr>
+						<td style="padding:0;">
 
-		<div style = "background-color:#D9EEE1;">
-			<h2>Weaknesses</h2>
-			<p style = "font-size: 7px;">
-			I can’t breathe underwater without equipment, I can’t fly by flapping my arms, I can’t regrow lost limbs, 
-			I can’t survive in space without a suit, I can’t live forever, I can’t photosynthesize like plants, 
-			I can’t hibernate for months like bears, I can’t see in total darkness, I can’t move faster than light, 
-			I can’t be in two places at the same time, I can’t walk through solid walls, I can’t lift mountains with my bare hands, 
-			I can’t jump into orbit, I can’t stop or reverse time, I can’t create matter from nothing, I can’t remember everything perfectly, 
-			I can’t read minds, I can’t naturally see ultraviolet or infrared light, I can’t hear ultrasonic sounds like bats, 
-			I can’t truly multitask with full attention, I can’t echolocate like bats or dolphins, I can’t smell as well as a dog, 
-			I can’t hold my breath for hours like a whale, I can’t change color like an octopus, I can’t run as fast as a cheetah, 
-			I can’t fly like a bird, I can’t glide like a flying squirrel, I can’t withstand extreme deep-sea pressure, 
-			I can’t digest wood like termites, I can’t drink saltwater safely, I can’t instantly heal wounds, 
-			I can’t predict the future with certainty, I can’t control the weather, I can’t teleport, I can’t become invisible, 
-			I can’t freeze time, I can’t talk to animals, I can’t survive without water for more than a few days, 
-			I can’t see behind my head without a mirror, I can’t breathe on Mars, I can’t store unlimited memories, 
-			and I can’t understand everything in the universe.
-			</p>
-			<p style = "font-size: 3.1px; color:#D9EEE1;"> 1 </p>
-		</div>
-		</div>
-		<!-- Body copy -->
+							<!-- 2) LOGO IMAGE -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td align="center" style="padding:0;">
+										<a href="https://www.youtube.com/watch?v=b51C8AbRDGU" style="text-decoration:none; display:block;">
+											<img src="Assets/takopi.png" alt="Interesting octopus creature" width="100%" style="max-width:200px; height:auto; display:block; border:0; margin:0 auto;">
+										</a>
+									</td>
+								</tr>
+							</table>
 
-		<p style = "color: white; text-align: center; font-size: 20px;"> 
-		So tell me... what do you think? <br>
-		If you are interested in seeing what I could do for your company, send me an email at dontEmailMe@test.com.
-		Also email me for any <br>
-		questions that you may have, if you don't have any questions then either I have either impressed you or you're 
-		lying. If you want to donate <br>
-		click this link below, everything helps even if you're only willing to send a penny.
-		</p>
-		
-		<!-- Button -->
-		
-		<button class = "center" type="button"> Click Me! </button>
-    
-		<!-- Footer information: Always include an unsubscribe link! -->
-		<p style = "color: white; text-align: center; font-size: 20px;">
-		If I owe you money, no I don't and please do me a favor and unsubscribe. <br>
-		<a href = "" style="color: white !important; text-decoration: underline !important;"> 
-			unsubscribe
-		</a>
-		</p>
-	
-		
+							<!-- 3) HEADLINE -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td align="center" style="padding:20px 10px; color:#ffffff; font-size:28px; font-weight:bold;">
+										Hello World... <br>
+										Welcome To My Email Campaign <br>
+										Let Me Tell You About Myself
+									</td>
+								</tr>
+							</table>
 
-	</body>
+							<!-- 4) THREE COLUMNS (Experience, Skills, Weaknesses) using a 3-col table -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<!-- Column 1: Experience -->
+									<td width="33%" style="background-color:#90E4C1; padding:15px; vertical-align:top; color:#000000; font-size:18px;">
+										<h2 style="margin:0 0 10px;">Experience</h2>
+										<p style="margin:5px 0;">I haven't made much progress in my career</p>
+										<p style="margin:5px 0;">But I sure do love working with HTML and CSS</p>
+									</td>
+									<!-- Column 2: Skills -->
+									<td width="33%" style="background-color:#B0E0E6; padding:15px; vertical-align:top; color:#000000; font-size:18px;">
+										<h2 style="margin:0 0 10px;">Skills</h2>
+										<p style="margin:5px 0;">I don't know</p>
+										<p style="margin:5px 0;">I think I learn fast?</p>
+									</td>
+									<!-- Column 3: Weaknesses -->
+									<td width="33%" style="background-color:#D9EEE1; padding:15px; vertical-align:top; color:#000000; font-size:18px;">
+										<h2 style="margin:0 0 10px;">Weaknesses</h2>
+										<p style="font-size:7px; line-height:1.4; margin:0;">
+											I can’t breathe underwater without equipment, I can’t fly by flapping my arms, I can’t regrow lost limbs, 
+											I can’t survive in space without a suit, I can’t live forever, I can’t photosynthesize like plants, 
+											I can’t hibernate for months like bears, I can’t see in total darkness, I can’t move faster than light, 
+											I can’t be in two places at the same time, I can’t walk through solid walls, I can’t lift mountains with my bare hands, 
+											I can’t jump into orbit, I can’t stop or reverse time, I can’t create matter from nothing, I can’t remember everything perfectly, 
+											I can’t read minds, I can’t naturally see ultraviolet or infrared light, I can’t hear ultrasonic sounds like bats, 
+											I can’t truly multitask with full attention, I can’t echolocate like bats or dolphins, I can’t smell as well as a dog, 
+											I can’t hold my breath for hours like a whale, I can’t change color like an octopus, I can’t run as fast as a cheetah, 
+											I can’t fly like a bird, I can’t glide like a flying squirrel, I can’t withstand extreme deep-sea pressure, 
+											I can’t digest wood like termites, I can’t drink saltwater safely, I can’t instantly heal wounds, 
+											I can’t predict the future with certainty, I can’t control the weather, I can’t teleport, I can’t become invisible, 
+											I can’t freeze time, I can’t talk to animals, I can’t survive without water for more than a few days, 
+											I can’t see behind my head without a mirror, I can’t breathe on Mars, I can’t store unlimited memories, 
+											and I can’t understand everything in the universe.
+										</p>
+									</td>
+								</tr>
+							</table>
 
+							<!-- 5) BODY COPY (intro to table) -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td align="center" style="color:#ffffff; font-size:20px; padding:30px 15px;">
+										If this doesn't convince you then let me tell you about the places that I have never worked at and maybe that will change your mind.
+									</td>
+								</tr>
+							</table>
+
+							<!-- 6) EXPERIENCE TABLE (fake jobs) -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background:#111111;">
+								<tr>
+									<td style="border:1px solid #555555; padding:8px; color:white; font-weight:bold;">Company</td>
+									<td style="border:1px solid #555555; padding:8px; color:white; font-weight:bold;">Experience</td>
+								</tr>
+								<tr>
+									<td style="border:1px solid #555555; padding:8px; color:white;">Microsoft</td>
+									<td style="border:1px solid #555555; padding:8px; color:white;">Senior Cloud Architect</td>
+								</tr>
+								<tr>
+									<td style="border:1px solid #555555; padding:8px; color:white;">Windows</td>
+									<td style="border:1px solid #555555; padding:8px; color:white;">Kernel Developer</td>
+								</tr>
+								<tr>
+									<td style="border:1px solid #555555; padding:8px; color:white;">NVIDIA</td>
+									<td style="border:1px solid #555555; padding:8px; color:white;">AI Research Scientist</td>
+								</tr>
+								<tr>
+									<td style="border:1px solid #555555; padding:8px; color:white;">Apple</td>
+									<td style="border:1px solid #555555; padding:8px; color:white;">Hardware Design Engineer</td>
+								</tr>
+								<tr>
+									<td style="border:1px solid #555555; padding:8px; color:white;">Amazon</td>
+									<td style="border:1px solid #555555; padding:8px; color:white;">Supply Chain Data Analyst</td>
+								</tr>
+							</table>
+
+							<!-- 7) BODY COPY (call to action / donate) -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td align="center" style="color:#ffffff; font-size:20px; padding:30px 15px;">
+										So tell me... what do you think? <br>
+										If you are interested in seeing what I could do for your company, send me an email at dontEmailMe@test.com.
+										Also email me for any <br>
+										questions that you may have, if you don't have any questions then either I have either impressed you or you're 
+										lying. If you want to donate <br>
+										click this link below, everything helps even if you're only willing to send a penny.
+									</td>
+								</tr>
+							</table>
+
+							<!-- 8) DONATE BUTTON -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td align="center" style="padding:20px 0;">
+										<a href="#" class="btn" style="display:inline-block; padding:12px 60px; border-radius:12px; background:linear-gradient(180deg, #0099ff, #27bac4); color:#ffffff; text-decoration:none; font-weight:600; font-size:18px;">Please Donate</a>
+									</td>
+								</tr>
+							</table>
+
+							<!-- 9) GIF BACKGROUND + UNSUBSCRIBE (using table cell with bg image) -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="gif-cell" style="background-image:url('Assets/landscape.gif'); background-size:cover; background-position:center; padding:80px 20px; text-align:center;">
+										<!-- content inside gif cell -->
+										<p style="color:#ffffff; font-size:20px; margin:0;">
+											If I owe you money, no I don't and please do me a favor and unsubscribe. <br>
+											<a href="#" style="color:white !important; text-decoration:underline !important; font-weight:bold;">unsubscribe</a>
+										</p>
+									</td>
+								</tr>
+							</table>
+
+							<!-- tiny spacer (optional) -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td style="padding:10px;">&nbsp;</td></tr></table>
+
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<!-- note: the stray "<" was removed; everything now wrapped in tables -->
+</body>
 </html>
-
-
