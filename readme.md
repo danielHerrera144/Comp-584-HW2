@@ -1,1 +1,1 @@
-https://github.com/csun-orm/comp584-hw2.git
+https://danielherrera144.github.io/Comp-584-HW2/
